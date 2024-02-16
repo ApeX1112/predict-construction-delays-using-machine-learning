@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(181, 184, 184);
+}
+
+#predictionResult {
+    margin-top: 20px;
+}
+#inpu1{
+    position: absolute;
+    left: 50px;
+}

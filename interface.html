@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictive Model Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>construction Delay Prediction</h1>
+    <form id="predictionForm">
+        <label for="input1">Estimated Surface (sq m)	:</label>
+        <input type="text" id="input1" name="input1" required><br>
+
+        <label for="input3">Estimated Height (m)	:</label>
+        <input type="text" id="input3" name="input3" required><br>
+
+        <label for="input4">Floors:</label>
+        <input type="text" id="input4" name="input4" required><br>
+
+        <label for="input5">Num of Workers:</label>
+        <input type="text" id="input5" name="input5" required><br>
+        <!-- Slider for value between 0 and 1 -->
+        <label for="sliderInput">Bad Weather Factor (%)	 (0 to 1):</label>
+        <input type="range" id="sliderInput" name="sliderInput" min="0" max="1" step="0.01" value="0.5"><br>
+        <span id="sliderValue">0.5</span><br>
+
+        <label for="sliderInput1">Design Variation Factor (%)	 (0 to 1):</label>
+        <input type="range" id="sliderInput1" name="sliderInput1" min="0" max="1" step="0.01" value="0.5"><br>
+        <span id="sliderValue1">0.5</span><br>
+
+        <label for="sliderInput2">Material Factor (%) (0 to 1):</label>
+        <input type="range" id="sliderInput2" name="sliderInput2" min="0" max="1" step="0.01" value="0.5"><br>
+        <span id="sliderValue2">0.5</span><br>
+
+        <label for="sliderInput3">Gov Regulation Factor (%)	 (0 to 1):</label>
+        <input type="range" id="sliderInput3" name="sliderInput3" min="0" max="1" step="0.01" value="0.5"><br>
+        <span id="sliderValue3">0.5</span><br>
+
+        <label for="sliderInput4">Site Condition Factor (%)
+            (0 to 1):</label>
+        <input type="range" id="sliderInput4" name="sliderInput4" min="0" max="1" step="0.01" value="0.5"><br>
+        <span id="sliderValue4">0.5</span><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <div id="predictionResult"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
